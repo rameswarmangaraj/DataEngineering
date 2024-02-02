@@ -131,3 +131,5 @@ Month 3: Advanced Topics and Projects
 
     Certifications:
         Consider obtaining relevant certifications, such as AWS Certified Big Data - Specialty, Microsoft Certified: Azure Data Engineer, or Google Cloud Certified - Professional Data Engineer.
+
+Created
