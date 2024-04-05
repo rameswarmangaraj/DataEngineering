@@ -1,4 +1,4 @@
-# Concepts of databases:
+# Database Fundamentals:
 
 ## 1. Data and Organization:
 
