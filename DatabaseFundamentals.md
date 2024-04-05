@@ -63,9 +63,10 @@
     A DBMS is the software that allows you to create, manage, and interact with databases. It's like a program that helps you organize and access all the information stored in your filing cabinet. There are many popular DBMS options like MySQL, Oracle, and Microsoft SQL Server.
 
 ```mermaid
-graph TD;
-A-->B;
-A-->C;
-B-->D;
-C-->D;
+erDiagram
+    CUSTOMER[Table 1 (Data Category 1)] --> |Foreign Key| ORDER[Table 2 (Data Category 2)]
+    CUSTOMER[Table 1 (Data Category 1)] --> |Foreign Key| DELIVERY[Table 3 (Data Category 3)]
+    ORDER[Table 2 (Data Category 2)] -->|Primary Key|  ORDER_ID[ID]
+    CUSTOMER[Table 1 (Data Category 1)] -->|Primary Key|  CUSTOMER_ID[ID]
+    DELIVERY[Table 3 (Data Category 3)] -->|Primary Key|  DELIVERY_ID[ID]
 ```
