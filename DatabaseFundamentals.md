@@ -64,9 +64,28 @@
 
 ```mermaid
 erDiagram
-    CUSTOMER[Table 1 (Data Category 1)] --> |Foreign Key| ORDER[Table 2 (Data Category 2)]
-    CUSTOMER[Table 1 (Data Category 1)] --> |Foreign Key| DELIVERY[Table 3 (Data Category 3)]
-    ORDER[Table 2 (Data Category 2)] -->|Primary Key|  ORDER_ID[ID]
-    CUSTOMER[Table 1 (Data Category 1)] -->|Primary Key|  CUSTOMER_ID[ID]
-    DELIVERY[Table 3 (Data Category 3)] -->|Primary Key|  DELIVERY_ID[ID]
+    Customer {
+        int customer_id
+        varchar(50) name
+        varchar(100) address
+        varchar(20) phone_number
+    }
+
+    Order {
+        int order_id
+        int customer_id
+        date order_date
+        decimal total_amount
+    }
+
+    Delivery {
+        int delivery_id
+        int order_id
+        varchar(100) delivery_address
+        date delivery_date
+    }
+
+    Customer ||--o{ Order : "places"
+    Order ||--o{ Delivery : "has"
+
 ```
